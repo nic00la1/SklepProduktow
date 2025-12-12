@@ -46,13 +46,14 @@ namespace SklepProduktow.Classes
 
         public void WyswietlInformacjeOProdukcie()
         {
-            Console.WriteLine("=== INFO o Produkcie ===");
+            Console.WriteLine("1. INFO o Produkcie ");
+
             Console.WriteLine($"Nazwa: {_nazwa}, Kwota: {_kwota}zł, Dostępna Ilość: {_ilosc}\n");
         }
 
         public void ZakupProdukt()
         {
-            Console.WriteLine("=== Zakup produktu ===");
+            Console.WriteLine("2. Zakup produktu");
 
             if (_ilosc > 0)
             {
@@ -67,7 +68,7 @@ namespace SklepProduktow.Classes
 
         public void UzupelnijProdukt(int ilosc)
         {
-            Console.WriteLine("=== Dostawa produktu ===");
+            Console.WriteLine("3. Dostawa produktu");
 
             _ilosc += ilosc;
             Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
@@ -75,7 +76,18 @@ namespace SklepProduktow.Classes
 
         public void ZmienCeneProduktu(double cena)
         {
-            Console.WriteLine("=== Zmiana ceny produktu ===");
+            Console.WriteLine("4. Zmiana ceny produktu ");
+
+            if (cena > 0)
+            {
+                _kwota = cena;
+                Console.WriteLine($"Nowa cena produktu wynosi: {_kwota}zł\n");
+            }
+            else
+            {
+                Console.WriteLine("Cena produktu jest spoza zakresu! Nie może być wartością ujemną!\n");
+            }
+
         }
     }
 }

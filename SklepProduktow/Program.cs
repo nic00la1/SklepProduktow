@@ -22,7 +22,11 @@ namespace SklepProduktow
             // Uzupełnianie produktu - (dostawa do sklepu)
             produkt1.UzupelnijProdukt(7);
 
+            produkt1.ZmienCeneProduktu(-2442);
+
             produkt1.WyswietlInformacjeOProdukcie();
+
+
         }
     }
 }
