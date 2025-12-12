@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SklepProduktow.Classes;
+using System;
 
 namespace SklepProduktow
 {
@@ -6,7 +7,10 @@ namespace SklepProduktow
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Witaj świecie!");
+            Console.WriteLine("=== SKLEP Produktów ===");
+
+            Produkt produkt = new Produkt();
+            produkt.WyswietlInformacjeOProdukcie();
         }
     }
 }

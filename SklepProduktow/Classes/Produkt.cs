@@ -43,5 +43,11 @@ namespace SklepProduktow.Classes
             _licznik++;
             _id = _licznik;
         }
+
+        public void WyswietlInformacjeOProdukcie()
+        {
+            Console.WriteLine("=== INFORMACJĘ o Produkcie ===");
+            Console.WriteLine($"Nazwa: {_nazwa}, Kwota: {_kwota}zł, Dostępna Ilość: {_ilosc}");
+        }
     }
 }
