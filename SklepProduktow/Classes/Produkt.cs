@@ -72,5 +72,12 @@ namespace SklepProduktow.Classes
             _ilosc = ilosc;
             Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
         }
+
+        public void ZmienCeneProduktu(double cena)
+        {
+            Console.WriteLine("=== Zmiana ceny produktu ===");
+
+
+        }
     }
 }
