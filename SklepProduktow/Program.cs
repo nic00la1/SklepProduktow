@@ -21,6 +21,8 @@ namespace SklepProduktow
 
             // Uzupełnianie produktu - (dostawa do sklepu)
             produkt1.UzupelnijProdukt(7);
+
+            produkt1.WyswietlInformacjeOProdukcie();
         }
     }
 }

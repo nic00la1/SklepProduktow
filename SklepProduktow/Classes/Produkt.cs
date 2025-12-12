@@ -69,15 +69,13 @@ namespace SklepProduktow.Classes
         {
             Console.WriteLine("=== Dostawa produktu ===");
 
-            _ilosc = ilosc;
+            _ilosc += ilosc;
             Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
         }
 
         public void ZmienCeneProduktu(double cena)
         {
             Console.WriteLine("=== Zmiana ceny produktu ===");
-
-
         }
     }
 }
