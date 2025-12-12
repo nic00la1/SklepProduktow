@@ -46,28 +46,31 @@ namespace SklepProduktow.Classes
 
         public void WyswietlInformacjeOProdukcie()
         {
-            Console.WriteLine("=== INFORMACJĘ o Produkcie ===");
-            Console.WriteLine($"Nazwa: {_nazwa}, Kwota: {_kwota}zł, Dostępna Ilość: {_ilosc}");
+            Console.WriteLine("=== INFO o Produkcie ===");
+            Console.WriteLine($"Nazwa: {_nazwa}, Kwota: {_kwota}zł, Dostępna Ilość: {_ilosc}\n");
         }
 
         public void ZakupProdukt()
         {
-            Console.WriteLine("=== Kupowanie produktu ===");
+            Console.WriteLine("=== Zakup produktu ===");
 
             if (_ilosc > 0)
             {
                 _ilosc--;
-                Console.WriteLine($"Zakupiono produkt pomyślnie! Liczba produktów: {_ilosc}");
+                Console.WriteLine($"Zakupiono produkt pomyślnie! Liczba produktów: {_ilosc}\n");
             }
             else
             {
-                Console.WriteLine("Ilość produktów jest za mała by ją odjąć!");
+                Console.WriteLine("Ilość produktów jest za mała by ją odjąć!\n");
             }
         }
 
         public void UzupelnijProdukt(int ilosc)
         {
+            Console.WriteLine("=== Dostawa produktu ===");
 
+            _ilosc = ilosc;
+            Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
         }
     }
 }

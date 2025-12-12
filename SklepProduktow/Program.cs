@@ -12,10 +12,11 @@ namespace SklepProduktow
             Produkt produkt = new Produkt();
             produkt.WyswietlInformacjeOProdukcie();
 
-            // Kupowanie produktów
+            // Kupowanie produktu
             produkt.ZakupProdukt();
 
-
+            // Uzupełnianie produktu - (dostawa do sklepu)
+            produkt.UzupelnijProdukt(7);
         }
     }
 }
