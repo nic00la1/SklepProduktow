@@ -64,5 +64,10 @@ namespace SklepProduktow.Classes
                 Console.WriteLine("Ilość produktów jest za mała by ją odjąć!");
             }
         }
+
+        public void UzupelnijProdukt(int ilosc)
+        {
+
+        }
     }
 }

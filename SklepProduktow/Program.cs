@@ -14,6 +14,8 @@ namespace SklepProduktow
 
             // Kupowanie produktów
             produkt.ZakupProdukt();
+
+
         }
     }
 }
