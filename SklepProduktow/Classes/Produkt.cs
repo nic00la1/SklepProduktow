@@ -49,5 +49,20 @@ namespace SklepProduktow.Classes
             Console.WriteLine("=== INFORMACJĘ o Produkcie ===");
             Console.WriteLine($"Nazwa: {_nazwa}, Kwota: {_kwota}zł, Dostępna Ilość: {_ilosc}");
         }
+
+        public void ZakupProdukt()
+        {
+            Console.WriteLine("=== Kupowanie produktu ===");
+
+            if (_ilosc > 0)
+            {
+                _ilosc--;
+                Console.WriteLine($"Zakupiono produkt pomyślnie! Liczba produktów: {_ilosc}");
+            }
+            else
+            {
+                Console.WriteLine("Ilość produktów jest za mała by ją odjąć!");
+            }
+        }
     }
 }
