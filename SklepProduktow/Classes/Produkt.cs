@@ -11,8 +11,44 @@ namespace SklepProduktow.Classes
         private int _id;
         private static int _licznik;
         protected int _ilosc;
+        protected int Ilosc
+        {
+            get => _ilosc;
+            set 
+            { 
+                if (_ilosc != value) 
+                { 
+                    Console.WriteLine($"Wartość pola Ilość z {_ilosc} została zmieniona na {value}.");
+                    _ilosc = value;
+                }
+            }
+        }
         public string _nazwa;
+        public string Nazwa
+        {
+            get => _nazwa;
+            set
+            {
+                if (_nazwa != value)
+                {
+                    Console.WriteLine($"Wartość pola Nazwa została zmieniona z {_nazwa} na: {value}.");
+                    _nazwa = value;
+                }
+            }
+        }
         public double _kwota;
+        public double Kwota
+        {
+            get => _kwota;
+            set
+            {
+                if (_kwota != value)
+                {
+                    Console.WriteLine($"Wartość pola Kwota została zmieniona z {_kwota}zł na: {value}zł.");
+                    _kwota = value;
+                }
+            }
+        }
 
         public Produkt()
         {
@@ -48,17 +84,17 @@ namespace SklepProduktow.Classes
         {
             Console.WriteLine("1. INFO o Produkcie ");
 
-            Console.WriteLine($"Nazwa: {_nazwa}, Kwota: {_kwota}zł, Dostępna Ilość: {_ilosc}\n");
+            Console.WriteLine($"Nazwa: {Nazwa}, Kwota: {Kwota}zł, Dostępna Ilość: {Ilosc}\n");
         }
 
         public void ZakupProdukt()
         {
             Console.WriteLine("2. Zakup produktu");
 
-            if (_ilosc > 0)
+            if (Ilosc > 0)
             {
-                _ilosc--;
-                Console.WriteLine($"Zakupiono produkt pomyślnie! Liczba produktów: {_ilosc}\n");
+                Ilosc -= 1;
+                Console.WriteLine($"Zakupiono produkt pomyślnie! Liczba produktów: {Ilosc}\n");
             }
             else
             {
@@ -70,7 +106,7 @@ namespace SklepProduktow.Classes
         {
             Console.WriteLine("3. Dostawa produktu");
 
-            _ilosc += ilosc;
+            Ilosc += ilosc;
             Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
         }
 
@@ -80,14 +116,13 @@ namespace SklepProduktow.Classes
 
             if (cena > 0)
             {
-                _kwota = cena;
-                Console.WriteLine($"Nowa cena produktu wynosi: {_kwota}zł\n");
+                Kwota = cena;
+                Console.WriteLine($"Nowa cena produktu wynosi: {Kwota}zł\n");
             }
             else
             {
                 Console.WriteLine("Cena produktu jest spoza zakresu! Nie może być wartością ujemną!\n");
             }
-
         }
     }
 }

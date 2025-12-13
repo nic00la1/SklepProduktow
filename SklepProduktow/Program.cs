@@ -14,19 +14,17 @@ namespace SklepProduktow
             Produkt produkt3 = new ("Witryna VALTIMO dąb/czarny", 1699.00, 4);
             Produkt produkt4 = new ("Deska SUP PRO TSUNAMI paddle board 350cm T13", 974.99, 2);
 
-            produkt1.WyswietlInformacjeOProdukcie();
 
-            // Kupowanie produktu
+            produkt1.WyswietlInformacjeOProdukcie();
             produkt1.ZakupProdukt();
-
-            // Uzupełnianie produktu - (dostawa do sklepu)
             produkt1.UzupelnijProdukt(7);
-
             produkt1.ZmienCeneProduktu(-2442);
-
             produkt1.WyswietlInformacjeOProdukcie();
 
+            produkt1.Nazwa = "Nowa nazwa";
+            produkt1.Kwota = 2442.33;
 
+            produkt1.WyswietlInformacjeOProdukcie();
         }
     }
 }
