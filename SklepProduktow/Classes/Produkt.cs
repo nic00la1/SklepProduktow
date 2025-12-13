@@ -83,9 +83,9 @@ namespace SklepProduktow.Classes
 
         public void WyswietlInformacjeOProdukcie()
         {
-            Console.WriteLine($"1. INFO o Produkcie: ");
+            Console.WriteLine($"--- INFO o Produkcie ---");
 
-            Console.WriteLine($"Nazwa: {Nazwa}, Kwota: {Kwota}zł, Dostępna Ilość: {Ilosc}\n");
+            Console.WriteLine($"ID: {Id}\nNazwa: {Nazwa}\nKwota: {Kwota} zł\nDostępna Ilość: {Ilosc}\n");
         }
 
         public void ZakupProdukt()
@@ -95,11 +95,15 @@ namespace SklepProduktow.Classes
             if (Ilosc > 0)
             {
                 Ilosc -= 1;
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Zakupiono produkt pomyślnie! Liczba produktów: {Ilosc}\n");
+                Console.ResetColor();
             }
             else
             {
+                Console.ForegroundColor= ConsoleColor.Red;
                 Console.WriteLine("Ilość produktów jest za mała by ją odjąć!\n");
+                Console.ResetColor();
             }
         }
 
@@ -107,8 +111,19 @@ namespace SklepProduktow.Classes
         {
             Console.WriteLine("3. Dostawa produktu");
 
-            Ilosc += ilosc;
-            Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
+            if (ilosc > 0)
+            {
+                Ilosc += ilosc;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Dostarczono produkt w ilości: {ilosc}\n");
+                Console.ResetColor();
+            } 
+            else
+            {
+                Console.ForegroundColor= ConsoleColor.Red;
+                Console.WriteLine("Twoja dostawa musi być dodatnia! Nie możesz wpisywać ujemnej kwoty!");
+                Console.ResetColor();
+            }
         }
 
         public void ZmienCeneProduktu(double cena)

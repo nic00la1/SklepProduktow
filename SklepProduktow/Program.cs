@@ -19,7 +19,7 @@ namespace SklepProduktow
             produkt1.Kwota = 2442.33;
 
             TestujProdukt(produkt2, 2, 3999.44);
-            TestujProdukt(produkt3, 1, 1888.55);
+            TestujProdukt(produkt3, -3, 1888.55);
             TestujProdukt(produkt4, 2, 1200.77);
         }
 
