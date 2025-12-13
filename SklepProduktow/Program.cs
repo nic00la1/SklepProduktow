@@ -25,11 +25,17 @@ namespace SklepProduktow
 
         static void TestujProdukt(Produkt p, int dostawa, double nowaCena)
         {
+            Console.WriteLine("===================================");
+            Console.WriteLine($"       Test Produktu #{p.Id}");
+            Console.WriteLine("===================================");
+
             p.WyswietlInformacjeOProdukcie();
             p.ZakupProdukt();
             p.UzupelnijProdukt(dostawa);
             p.ZmienCeneProduktu(nowaCena);
             p.WyswietlInformacjeOProdukcie();
+            Console.WriteLine("===================================");
+
         }
     }
 }

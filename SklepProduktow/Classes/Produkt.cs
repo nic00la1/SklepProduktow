@@ -9,6 +9,7 @@ namespace SklepProduktow.Classes
     public class Produkt
     {
         private int _id;
+        public int Id => _id;
         private static int _licznik;
         protected int _ilosc;
         protected int Ilosc
@@ -82,7 +83,7 @@ namespace SklepProduktow.Classes
 
         public void WyswietlInformacjeOProdukcie()
         {
-            Console.WriteLine($"1. INFO o Produkcie: {_id}");
+            Console.WriteLine($"1. INFO o Produkcie: ");
 
             Console.WriteLine($"Nazwa: {Nazwa}, Kwota: {Kwota}zł, Dostępna Ilość: {Ilosc}\n");
         }
