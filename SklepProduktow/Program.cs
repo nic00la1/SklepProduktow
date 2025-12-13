@@ -14,17 +14,22 @@ namespace SklepProduktow
             Produkt produkt3 = new ("Witryna VALTIMO dąb/czarny", 1699.00, 4);
             Produkt produkt4 = new ("Deska SUP PRO TSUNAMI paddle board 350cm T13", 974.99, 2);
 
-
-            produkt1.WyswietlInformacjeOProdukcie();
-            produkt1.ZakupProdukt();
-            produkt1.UzupelnijProdukt(7);
-            produkt1.ZmienCeneProduktu(-2442);
-            produkt1.WyswietlInformacjeOProdukcie();
-
-            produkt1.Nazwa = "Nowa nazwa";
+            TestujProdukt(produkt1, 7, -2444);
+            produkt1.Nazwa = "Laptop Lenovo";
             produkt1.Kwota = 2442.33;
 
-            produkt1.WyswietlInformacjeOProdukcie();
+            TestujProdukt(produkt2, 2, 3999.44);
+            TestujProdukt(produkt3, 1, 1888.55);
+            TestujProdukt(produkt4, 2, 1200.77);
+        }
+
+        static void TestujProdukt(Produkt p, int dostawa, double nowaCena)
+        {
+            p.WyswietlInformacjeOProdukcie();
+            p.ZakupProdukt();
+            p.UzupelnijProdukt(dostawa);
+            p.ZmienCeneProduktu(nowaCena);
+            p.WyswietlInformacjeOProdukcie();
         }
     }
 }

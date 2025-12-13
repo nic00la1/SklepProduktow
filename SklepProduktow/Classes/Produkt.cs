@@ -82,7 +82,7 @@ namespace SklepProduktow.Classes
 
         public void WyswietlInformacjeOProdukcie()
         {
-            Console.WriteLine("1. INFO o Produkcie ");
+            Console.WriteLine($"1. INFO o Produkcie: {_id}");
 
             Console.WriteLine($"Nazwa: {Nazwa}, Kwota: {Kwota}zł, Dostępna Ilość: {Ilosc}\n");
         }
