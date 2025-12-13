@@ -7,7 +7,7 @@ namespace SklepProduktow
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=== SKLEP Produktów ===\n");
+            Console.WriteLine("\n=== SKLEP Produktów ===\n");
 
             Produkt produkt1 = new ("Laptop HP EliteBook", 7149.00, 10);
             Produkt produkt2 = new ("Bieżnia Domyos T900D 18km/h", 2999.00, 7);
@@ -34,7 +34,7 @@ namespace SklepProduktow
             p.UzupelnijProdukt(dostawa);
             p.ZmienCeneProduktu(nowaCena);
             p.WyswietlInformacjeOProdukcie();
-            Console.WriteLine("===================================");
+            Console.WriteLine("===================================\n");
 
         }
     }
